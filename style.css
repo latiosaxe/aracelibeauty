@@ -8,7 +8,7 @@ body {
   position: relative;
 }
 
-body img {
+body .wrapper {
   top: 50%;
   left: 50%;
   opacity: 0;
@@ -21,7 +21,55 @@ body img {
           transform: translateX(-50%) translateY(-50%);
 }
 
-body img.ready {
+body .wrapper .relative {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body .wrapper img {
+  width: 100%;
+  display: block;
+}
+
+body .wrapper ul.social {
+  top: 50vw;
+  right: 6.2vw;
+  z-index: 4;
+  position: absolute;
+  -webkit-transform: translateY(-19vw);
+          transform: translateY(-19vw);
+}
+
+body .wrapper ul.social li {
+  opacity: 0;
+  margin-right: 2vw;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 0.5s 0.9s ease-out;
+  transition: all 0.5s 0.9s ease-out;
+}
+
+body .wrapper ul.social li a {
+  color: #fff;
+  font-size: 2vw;
+}
+
+body .wrapper ul.social li:last-of-type {
+  margin: 0;
+  -webkit-transition: all 0.5s 1.4s ease-out;
+  transition: all 0.5s 1.4s ease-out;
+}
+
+body .wrapper.ready {
   opacity: 1;
+}
+
+body .wrapper.ready .social li {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 /*# sourceMappingURL=style.css.map */
